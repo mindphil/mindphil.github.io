@@ -6,7 +6,7 @@ permalink: /books/
 <h1 class="page-title">Reviews</h1>
 <p class="page-intro">Everything I've read and had thoughts about.</p>
 
-{% assign books = site.books | sort: "date_read" | reverse %}
+{% assign books = site.books | sort: "title" %}
 <ul class="book-list">
   {% for book in books %}
   <li class="book-card">
@@ -14,11 +14,8 @@ permalink: /books/
       <span class="book-card-title">{{ book.title }}</span>
       {% if book.author %}<span class="book-card-author">{{ book.author }}</span>{% endif %}
     </a>
-    <span class="book-card-side">
-      {% if book.date_read %}<span class="book-card-date">{{ book.date_read | date: "%b %Y" }}</span>{% endif %}
-    </span>
   </li>
   {% endfor %}
 </ul>
 
-{% if books.size == 0 %}<p class="empty">No reviews yet — add a Markdown file to <code>_books/</code>.</p>{% endif %}
+{% if books.size == 0 %}<p class="empty">No reviews yet.</p>{% endif %}

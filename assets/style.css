@@ -93,19 +93,9 @@ h1, h2, h3 {
 .page-title { font-size: clamp(2rem, 5vw, 2.6rem); margin: 0 0 0.3rem; }
 .page-intro { color: var(--ink-soft); font-style: italic; margin: 0 0 2.2rem; }
 
-/* ---------- documents on home ---------- */
-.documents { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
-.documents h2 { font-size: 1.4rem; margin: 0 0 0.8rem; }
-.doc-list { list-style: none; padding: 0; margin: 0; }
-.doc-list li { padding: 0.35rem 0; }
-
 /* ---------- reviews index ---------- */
 .book-list { list-style: none; padding: 0; margin: 0; }
 .book-card {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
   padding: 1rem 0;
   border-bottom: 1px solid var(--rule);
 }
@@ -117,8 +107,6 @@ h1, h2, h3 {
 }
 .book-card-link:hover .book-card-title { color: var(--accent); }
 .book-card-author { color: var(--ink-soft); font-style: italic; margin-left: 0.5rem; }
-.book-card-side { text-align: right; white-space: nowrap; flex-shrink: 0; }
-.book-card-date { display: block; color: var(--ink-soft); font-size: 0.85rem; }
 .empty { color: var(--ink-soft); font-style: italic; }
 
 /* ---------- single review ---------- */
@@ -126,7 +114,6 @@ h1, h2, h3 {
 .book-title { font-size: clamp(2rem, 5vw, 2.8rem); margin: 0 0 0.6rem; }
 .book-meta { margin: 0; color: var(--ink-soft); }
 .book-author { font-style: italic; }
-.book-date::before { content: "·"; margin: 0 0.6rem; color: var(--rule); }
 .book-body { font-size: 1.2rem; }
 .book-body blockquote {
   margin: 1.8rem 0;
@@ -155,7 +142,4 @@ h1, h2, h3 {
 /* ---------- small screens ---------- */
 @media (max-width: 600px) {
   body { font-size: 1.08rem; }
-  .book-card { flex-direction: column; gap: 0.3rem; }
-  .book-card-side { text-align: left; }
-  .book-card-date { display: inline; margin-left: 0.6rem; }
 }

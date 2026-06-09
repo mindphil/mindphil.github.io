@@ -1,3 +1,3 @@
 # My Book Journal & Document Repository
 
-A small GitHub Pages site: a place for my book reviews, to-read list, and documents
+A small GitHub Pages site  for my book reviews and to-read list
