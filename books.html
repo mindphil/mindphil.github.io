@@ -1,0 +1,24 @@
+---
+layout: default
+title: Reviews
+permalink: /books/
+---
+<h1 class="page-title">Reviews</h1>
+<p class="page-intro">Everything I've read and had thoughts about.</p>
+
+{% assign books = site.books | sort: "date_read" | reverse %}
+<ul class="book-list">
+  {% for book in books %}
+  <li class="book-card">
+    <a class="book-card-link" href="{{ book.url | relative_url }}">
+      <span class="book-card-title">{{ book.title }}</span>
+      {% if book.author %}<span class="book-card-author">{{ book.author }}</span>{% endif %}
+    </a>
+    <span class="book-card-side">
+      {% if book.date_read %}<span class="book-card-date">{{ book.date_read | date: "%b %Y" }}</span>{% endif %}
+    </span>
+  </li>
+  {% endfor %}
+</ul>
+
+{% if books.size == 0 %}<p class="empty">No reviews yet — add a Markdown file to <code>_books/</code>.</p>{% endif %}

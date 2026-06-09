@@ -1,0 +1,89 @@
+# Ancient
+- title: "The Republic"
+  author: "Plato"
+  note: "Ancient"
+
+- title: "Anabasis"
+  author: "Xenophon"
+  note: "Ancient"
+
+- title: "Iliad"
+  author: "Homer"
+  note: "Ancient"
+
+- title: "The Odyssey"
+  author: "Homer"
+  note: "Ancient"
+
+- title: "The Three Theban Plays"
+  author: "Sophocles"
+  note: "Ancient"
+
+# Classics
+- title: "Great Expectations"
+  author: "Charles Dickens"
+  note: "Classics"
+
+- title: "The Count of Monte Cristo"
+  author: "Alexandre Dumas"
+  note: "Classics"
+
+- title: "Les Miserables"
+  author: "Victor Hugo"
+  note: "Classics"
+
+- title: "A Christmas Carol"
+  author: "Charles Dickens"
+  note: "Classics"
+
+- title: "The Great Gatsby"
+  author: "Fitzgerald"
+  note: "Classics"
+
+- title: "Moby Dick"
+  author: "Herman Melville"
+  note: "Classics"
+
+- title: "The Crucible"
+  author: "Arthur Miller"
+  note: "Classics"
+
+# Finance
+- title: "Narrative Economics: How Stories Go Viral and Drive Major Economic Events"
+  author: "Robert Schiler"
+  note: "Finance"
+
+# Narrative
+- title: "The Death of Ivan Ilyich"
+  author: "Tolstoy"
+  note: "Narrative"
+
+- title: "Traumnovelle (Dream Story)"
+  author: "Arthur Schnitzler"
+  note: "Narrative"
+
+- title: "The Long Walk"
+  author: "Sławomir Rawicz"
+  note: "Narrative"
+
+- title: "The Most Dangerous Game"
+  author: "Richard Connell"
+  note: "Narrative"
+
+# Philosophy
+- title: "The Myth of Sisyphus"
+  author: "Albert Camus"
+  note: "Philosophy"
+
+- title: "On The Shortness of Life"
+  author: "Seneca"
+  note: "Philosophy"
+
+# Nonfiction
+- title: "The Polymath in an Age of Specialisation"
+  author: "Peter Burke"
+  note: "Nonfiction"
+
+- title: "Range"
+  author: "David Epstein"
+  note: "Nonfiction"

@@ -1,0 +1,17 @@
+---
+layout: default
+title: To Read
+permalink: /reading-list/
+---
+<h1 class="page-title">To Read</h1>
+<p class="page-intro">Reading list.</p>
+
+<ul class="reading-list">
+  {% for book in site.data.to_read %}
+  <li>
+    <span class="tr-title">{{ book.title }}</span>
+    {% if book.author %}<span class="tr-author">{{ book.author }}</span>{% endif %}
+    {% if book.note %}<span class="tr-note">{{ book.note }}</span>{% endif %}
+  </li>
+  {% endfor %}
+</ul>

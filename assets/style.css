@@ -1,0 +1,161 @@
+:root {
+  --paper:      #f5f1e7;
+  --paper-deep: #efe9da;
+  --ink:        #211d18;
+  --ink-soft:   #5d5547;
+  --accent:     #7a2e2e;   /* oxblood */
+  --rule:       #ddd4c1;
+  --measure:    44rem;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-size: 1.18rem;
+  line-height: 1.65;
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+}
+
+/* subtle paper texture via layered gradients */
+body {
+  background-image:
+    radial-gradient(circle at 18% 12%, rgba(122,46,46,0.03), transparent 60%),
+    radial-gradient(circle at 85% 80%, rgba(33,29,24,0.04), transparent 55%);
+  background-attachment: fixed;
+}
+
+a { color: var(--accent); text-underline-offset: 2px; text-decoration-thickness: 1px; }
+a:hover { color: var(--ink); }
+
+/* ---------- header / nav ---------- */
+.site-header {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 2.6rem 1.5rem 1.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.site-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.site-nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+.site-nav a {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 0.98rem;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+.site-nav a:hover { color: var(--accent); }
+
+/* ---------- layout ---------- */
+.content {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 1rem;
+  min-height: 50vh;
+}
+.site-footer {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+/* ---------- headings ---------- */
+h1, h2, h3 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.intro h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); margin: 0 0 1rem; }
+.name { color: var(--accent); }
+.lede { font-size: 1.32rem; }
+.page-title { font-size: clamp(2rem, 5vw, 2.6rem); margin: 0 0 0.3rem; }
+.page-intro { color: var(--ink-soft); font-style: italic; margin: 0 0 2.2rem; }
+
+/* ---------- documents on home ---------- */
+.documents { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
+.documents h2 { font-size: 1.4rem; margin: 0 0 0.8rem; }
+.doc-list { list-style: none; padding: 0; margin: 0; }
+.doc-list li { padding: 0.35rem 0; }
+
+/* ---------- reviews index ---------- */
+.book-list { list-style: none; padding: 0; margin: 0; }
+.book-card {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.book-card-link { text-decoration: none; color: var(--ink); }
+.book-card-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.book-card-link:hover .book-card-title { color: var(--accent); }
+.book-card-author { color: var(--ink-soft); font-style: italic; margin-left: 0.5rem; }
+.book-card-side { text-align: right; white-space: nowrap; flex-shrink: 0; }
+.book-card-date { display: block; color: var(--ink-soft); font-size: 0.85rem; }
+.empty { color: var(--ink-soft); font-style: italic; }
+
+/* ---------- single review ---------- */
+.book-header { margin-bottom: 2.2rem; }
+.book-title { font-size: clamp(2rem, 5vw, 2.8rem); margin: 0 0 0.6rem; }
+.book-meta { margin: 0; color: var(--ink-soft); }
+.book-author { font-style: italic; }
+.book-date::before { content: "·"; margin: 0 0.6rem; color: var(--rule); }
+.book-body { font-size: 1.2rem; }
+.book-body blockquote {
+  margin: 1.8rem 0;
+  padding: 0.2rem 0 0.2rem 1.4rem;
+  border-left: 3px solid var(--accent);
+  font-style: italic;
+  color: var(--ink-soft);
+}
+.book-body ul { padding-left: 1.2rem; }
+.book-body code {
+  background: var(--paper-deep);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+.back { margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid var(--rule); }
+.back a { font-family: "Fraunces", Georgia, serif; text-decoration: none; }
+
+/* ---------- to-read list ---------- */
+.reading-list { list-style: none; padding: 0; margin: 0; }
+.reading-list li { padding: 0.85rem 0; border-bottom: 1px solid var(--rule); }
+.tr-title { font-family: "Fraunces", Georgia, serif; font-size: 1.2rem; font-weight: 600; }
+.tr-author { color: var(--ink-soft); font-style: italic; margin-left: 0.5rem; }
+.tr-note { display: block; color: var(--ink-soft); font-size: 0.95rem; margin-top: 0.15rem; }
+
+/* ---------- small screens ---------- */
+@media (max-width: 600px) {
+  body { font-size: 1.08rem; }
+  .book-card { flex-direction: column; gap: 0.3rem; }
+  .book-card-side { text-align: left; }
+  .book-card-date { display: inline; margin-left: 0.6rem; }
+}
