@@ -4,14 +4,19 @@ title: To Read
 permalink: /reading-list/
 ---
 <h1 class="page-title">To Read</h1>
-<p class="page-intro">Reading list.</p>
+<p class="page-intro">If it's not the best book you've ever read, don't read it" -- Naval Ravikant.</p>
 
-<ul class="reading-list">
-  {% for book in site.data.to_read %}
-  <li>
-    <span class="tr-title">{{ book.title }}</span>
-    {% if book.author %}<span class="tr-author">{{ book.author }}</span>{% endif %}
-    {% if book.note %}<span class="tr-note">{{ book.note }}</span>{% endif %}
-  </li>
-  {% endfor %}
-</ul>
+{% assign sections = site.data.to_read | group_by: "note" %}
+{% for section in sections %}
+<section class="tr-section">
+  {% if section.name != "" %}<h2 class="tr-heading">{{ section.name }}</h2>{% endif %}
+  <ul class="reading-list">
+    {% for book in section.items %}
+    <li>
+      <span class="tr-title">{{ book.title }}</span>
+      {% if book.author %}<span class="tr-author">{{ book.author }}</span>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}

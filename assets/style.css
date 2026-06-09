@@ -137,7 +137,8 @@ h1, h2, h3 {
 .reading-list li { padding: 0.85rem 0; border-bottom: 1px solid var(--rule); }
 .tr-title { font-family: "Fraunces", Georgia, serif; font-size: 1.2rem; font-weight: 600; }
 .tr-author { color: var(--ink-soft); font-style: italic; margin-left: 0.5rem; }
-.tr-note { display: block; color: var(--ink-soft); font-size: 0.95rem; margin-top: 0.15rem; }
+.tr-section { margin-bottom: 2.6rem; }
+.tr-heading { font-size: 1.4rem; margin: 0 0 0.5rem; color: var(--accent); }
 
 /* ---------- small screens ---------- */
 @media (max-width: 600px) {
