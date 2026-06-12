@@ -1,0 +1,85 @@
+:root{
+    --bg:#ffffff;
+    --fg:#1d1d1f;
+    --muted:#5f5f5f;
+    --accent:#0066CC;        /* apple link color */
+    --rule:#e3e3e3;
+  }
+
+  *{ box-sizing:border-box; }
+
+  body{
+    max-width:720px;
+    margin:2.5rem auto 0;
+    padding:0 1.25rem;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:Verdana, Arial, sans-serif;
+    font-size:1.0625rem;     /* 17px */
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-text-size-adjust:100%;
+  }
+
+  /* header: text on the left, avatar upper-right */
+  .header-top{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:1.5rem;
+  }
+  .header-text{ min-width:0; }
+
+   .avatar{
+    flex-shrink:0;
+    width:150px;
+    height:200px;
+    border-radius:14px;
+    object-fit:cover;
+    object-position:center top;
+    border:1px solid var(--rule);
+    background:#f0f0f2;
+  }
+
+  h1{ font-size:2.1rem; font-weight:600; letter-spacing:-.02em; margin:0 0 .6rem; }
+
+  p{ margin:0 0 1rem; }
+  a{ color:var(--accent); text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+
+  .contact{ color:var(--muted); font-size:.92rem; line-height:1.7; }
+  .contact p{ margin:0 0 .7rem; }
+
+  .bio{ margin-top:1.6rem; }
+
+  main{ margin-top:1.6rem; }
+
+  section{ border-top:1px solid var(--rule); padding:1.3rem 0; }
+  h2{ font-size:1.2rem; font-weight:600; margin:0 0 1rem; }
+
+  .entry-list{ list-style:none; padding:0; margin:0; }
+  .entry-list li{ margin-bottom:1.3rem; }
+  .entry-list li:last-child{ margin-bottom:0; }
+  .entry-title{ font-weight:600; }
+  .entry-desc{ margin:.15rem 0 0; color:var(--muted); font-size:.95rem; }
+  .muted{ color:var(--muted); }
+
+  footer{
+    margin-top:3rem;
+    padding-top:1.2rem;
+    padding-bottom:3rem;
+    color:var(--muted);
+    font-size:.88rem;
+  }
+
+  /* @media (max-width:600px){
+  .avatar{ display:none; }
+  body{ font-size:1.25rem; }
+}  */
+
+  @media (max-width:600px){
+  .header-top{ flex-direction:column-reverse; align-items:center; text-align:center; }
+  .avatar{ width:130px; height:174px; }
+  body{ font-size:1.25rem; }
+}
