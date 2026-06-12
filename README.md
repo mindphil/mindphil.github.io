@@ -1,3 +1,1 @@
-# My personal website
-
-A small GitHub Pages personal website
+GitHub Pages personal website: https://mindphil.github.io/
